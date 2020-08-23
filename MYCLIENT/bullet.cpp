@@ -18,9 +18,7 @@ Bullet::Bullet(int player_number,QPointF start,QPointF end,QGraphicsPixmapItem *
      this->player_number=player_number;
      QPixmap p(":/images/bullet.png");
      setPixmap(p.scaled(40,40));
-     this->setPos(start);    // Устанавливаем стартовую позицию
-     // Определяем траекторию полёта пули
-
+     this->setPos(start);
      QLineF lineToTarget(start, end);
      // Угол поворота в направлении к цели
      qreal angleToTarget = ::acos(lineToTarget.dx() / lineToTarget.length());
